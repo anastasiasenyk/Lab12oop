@@ -12,12 +12,12 @@ public class Handler {
     }
 
     public  void  process(int amount) {
-        if (amount % quantity > 0){
-            throw new IllegalArgumentException();
-        } else if (next != null) {
+        if (next != null) {
             next.process(amount % quantity);
+        } else if (amount % quantity > 0) {
+            throw new IllegalArgumentException();
         }
-        
+
         System.out.println(amount / quantity + " * " + quantity);
 
     }
