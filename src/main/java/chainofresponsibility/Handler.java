@@ -14,7 +14,7 @@ public class Handler {
     public  void  process(int amount) {
         if (next != null) {
             next.process(amount % quantity);
-        } else if (amount % quantity > 0) {
+        } else if (amount % quantity > 0 || amount<0) {
             throw new IllegalArgumentException();
         }
 
