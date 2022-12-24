@@ -9,7 +9,6 @@ import com.google.cloud.vision.v1.Image;
 import com.google.cloud.vision.v1.ImageAnnotatorClient;
 import com.google.cloud.vision.v1.ImageSource;
 import com.google.cloud.vision.v1.TextAnnotation;
-import decorators.Document;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 
@@ -18,6 +17,7 @@ import java.util.List;
 
 @AllArgsConstructor
 public class SmartDocument implements Document {
+
     public String gcsPath;
 
     @SneakyThrows
@@ -41,6 +41,7 @@ public class SmartDocument implements Document {
                 return annotation.getText();
             }
         }
+
         return "";
     }
 }
