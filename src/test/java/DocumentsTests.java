@@ -18,8 +18,8 @@ public class DocumentsTests {
 
     @Test
     public void testCachedDocument(){
-        Document document = new SmartDocument("gs://testoop/Screenshot 2022-12-05 at 09.15.04.png");
-        CachedDocument cdoc = new CachedDocument(document);
+        CachedDocument cdoc = new CachedDocument("gs://testoop/Screenshot 2022-12-05 at 09.15.04.png");
+        cdoc.parse();
 
     }
 
