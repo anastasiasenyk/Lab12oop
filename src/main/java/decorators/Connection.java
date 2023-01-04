@@ -30,7 +30,7 @@ public class Connection {
     @SneakyThrows
     public static Connection getInstance() {
         if (connection == null) {
-            connecti    on = new Connection();
+            connection = new Connection();
         }
         return connection;
     }
